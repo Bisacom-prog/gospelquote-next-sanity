@@ -1,0 +1,38 @@
+{
+  "name": "gospelquote",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "sanity:dev": "sanity dev --host 0.0.0.0 --port 3333 --project .",
+    "sanity:deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^4.21.1",
+    "clsx": "^2.1.1",
+    "groq": "^3.72.0",
+    "next": "^15.0.0",
+    "next-sanity": "^11.6.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sanity": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.7.0",
+    "eslint-config-next": "^15.0.0",
+    "postcss": "^8.4.39",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4"
+  }
+}
