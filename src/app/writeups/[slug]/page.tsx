@@ -1,5 +1,6 @@
-import { client } from '@/lib/sanity'
-import { notFound } from 'next/navigation'
+import type { Writeup } from "@/lib/types"
+import { client } from "@/lib/sanity"
+import { notFound } from "next/navigation"
 
 type PageProps = {
   params: Promise<{
@@ -10,7 +11,7 @@ type PageProps = {
 export default async function WriteupPage({ params }: PageProps) {
   const { slug } = await params
 
-  const post = await client.fetch(
+  const post = await client.fetch<Writeup | null>(
     `*[_type == "article" && slug.current == $slug][0]`,
     { slug }
   )
