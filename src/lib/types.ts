@@ -42,3 +42,14 @@ export type Doodle = {
   videoUrl?: string;
   tags?: string[];
 };
+
+export type Writeup = {
+  _id: string
+  title: string
+  slug: {
+    current: string
+  }
+  body?: any
+  publishedAt?: string
+};
+
