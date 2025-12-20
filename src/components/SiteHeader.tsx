@@ -10,7 +10,8 @@ const nav = [
   { href: '/writeups', label: 'Write-ups' },
   { href: '/podcasts', label: 'Podcasts' },
   { href: '/doodles', label: 'Doodles' },
-  { href: '/contact', label: 'Contact' }
+  { href: '/contact', label: 'Contact' },
+  { href: '/#about', label: 'About' }
 ];
 
 const social = [

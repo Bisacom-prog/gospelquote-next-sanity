@@ -31,6 +31,10 @@ export function SiteFooter() {
             <a href="#" className="underline hover:text-accent" data-manage-consent>
               Manage cookies
             </a>
+            <span className="mx-2 opacity-60">•</span>
+            <a href="#" data-enable-analytics className="underline hover:text-accent transition">
+              Enable analytics cookies
+            </a>
           </div>
         </div>
 

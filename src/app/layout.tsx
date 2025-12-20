@@ -3,6 +3,7 @@ import Script from 'next/script';
 import { Poppins, Playfair_Display } from 'next/font/google';
 import { siteConfig } from '@/lib/site';
 import { ThemeScript } from '@/components/ThemeScript';
+import { ScrollRevealScript } from '@/components/ScrollRevealScript';
 import { SiteHeader } from '@/components/SiteHeader';
 import { SiteFooter } from '@/components/SiteFooter';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -44,12 +45,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const ga4 = process.env.NEXT_PUBLIC_GA4_ID;
+  const ga4 = process.env.NEXT_PUBLIC_GA_ID ?? process.env.NEXT_PUBLIC_GA4_ID;
 
   return (
     <html lang="en" className={`scroll-smooth ${poppins.variable} ${playfair.variable}`}>
       <head>
         <ThemeScript />
+        <ScrollRevealScript />
       </head>
       <body className="bg-cream text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
         {ga4 ? (
