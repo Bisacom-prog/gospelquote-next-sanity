@@ -10,7 +10,8 @@ export async function GET(request: Request) {
     return new Response("Invalid token", { status: 401 })
   }
 
-  draftMode().enable()
+  const dm = await draftMode()
+  dm.enable()
 
   return NextResponse.redirect(
     new URL(`/writeups/${slug}`, request.url)
