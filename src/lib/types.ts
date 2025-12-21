@@ -10,3 +10,5 @@ export type Doodle = {
   publishedAt?: string
 }
 ;
+// ===== Article / Writeup alignment =====
+export type Article = Writeup;
