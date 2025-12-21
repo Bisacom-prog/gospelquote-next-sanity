@@ -23,7 +23,10 @@ export type Podcast = {
 export type Doodle = {
   _id: string
   title: string
-  slug: Slug
+  slug: {
+    current: string
+  }
+  excerpt?: string
   videoUrl?: string
   publishedAt?: string
 }
