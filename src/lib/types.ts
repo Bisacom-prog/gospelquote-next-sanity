@@ -3,6 +3,13 @@ export type Slug = {
   current: string
 }
 
+// ===== Categories =====
+export type Category = {
+  _id: string
+  title: string
+  slug: Slug
+}
+
 // ===== Articles / Writeups =====
 export type Writeup = {
   _id: string
@@ -12,11 +19,7 @@ export type Writeup = {
   body?: any
   readingTime?: number
   publishedAt?: string
-  category?: {
-    _id: string
-    title: string
-    slug: Slug
-  }
+  category?: Category
 }
 
 // Home page uses Article naming
@@ -43,4 +46,3 @@ export type Doodle = {
   videoUrl?: string
   publishedAt?: string
 }
-;
