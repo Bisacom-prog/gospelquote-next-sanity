@@ -12,6 +12,11 @@ export type Writeup = {
   body?: any
   readingTime?: number
   publishedAt?: string
+  category?: {
+    _id: string
+    title: string
+    slug: Slug
+  }
 }
 
 // Home page uses Article naming
